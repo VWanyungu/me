@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap');
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+/* Image div */
+.image{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+}
+/* Name div */
+.name{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 25px;
+}
+.name2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Name spam */
+#name{
+    font-family: 'Bruno Ace SC', cursive;
+    font-weight: bold;
+    font-size: 40px;
+}
+#name2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+/* Menu Div */
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: rgb(247,247,248);
+}
+/* Menu Items */
+#menuItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    list-style: none;
+}
+#menuItems > li > button{
+    font-family: 'Inconsolata', monospace;
+    background-color:rgb(247,247,248) ;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 7px 30px 7px 30px;
+    transition: 1s;
+    border: 0px solid darkgray;
+    border-radius: 10px;
+}
+#menuItems > li > button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #4b6cc1;
+}
+
+/* Footer div */
+.footer{
+    display: block;
+    width:fit-content;
+    margin:auto;
+}
+#footerNotes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footerNotes p{
+    font-family: 'Inconsolata', monospace;
+}
+
+/*Main content area*/
+#contentPrime{
+    margin-top: 18px;
+}
+
+/*Specific content area*/
+.content{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    gap: 35px;
+
+}
+.stackContent{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+.stackContent div{
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/**Content title*/
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.titleName{
+    font-family: 'Inconsolata', monospace;
+    font-size: 40px;
+    margin: 0;
+
+}
+.more{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/**Content text**/
+.details{
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    margin: 0;
+}
+
+.longText{
+    inline-size: 300px;
+    overflow-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.titleName2{
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+.more2{
+    font-size: 20px;
+}
+.MoreLink{
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+    color: white;
+    border: 0px solid darkgray;
+    background-color: #4b6cc1;
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 17px;
+    transition: 0.5s;
+}
+.MoreLink:hover{
+    font-size: 20px;
+    background-color: white;
+    border: 2px solid #4b6cc1;
+    color: #4b6cc1;
+}
+
+/*Contact Page*/
+#contactDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactDetails{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.contactDetails .img{
+    width: 50px;
+    height: 50px;
+
+}
+#twitter, #linkedin, #github{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
