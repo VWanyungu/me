@@ -38,3 +38,4 @@ contact.addEventListener("click", function(){
     contactDiv.style.display = "block"
 })
 
+

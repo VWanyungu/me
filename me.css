@@ -10,17 +10,39 @@ body{
    align-items: center;
    margin-top: 50px;
 }
-/* Name div */
-.name{
-    display: flex;
+/*Homepage*/
+#homePage{
+   display: flex;
    justify-content: center;
    align-items: center;
+   gap: 50px;
+}
+#homeImage{
+    width: 200px;
+    margin-top: 50px;
+}
+#homeImage > img {
+    filter: grayscale(100%);
+}
+#homeText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 600px;
+}
+/* Name div */
+.name{
+    /* display: flex;
+   justify-content: center;
+   align-items: center; */
    margin-top: 25px;
 }
 .name2{
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -33,7 +55,7 @@ body{
 }
 #name2{
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 /* Menu Div */
@@ -202,4 +224,5 @@ body{
     align-items: center;
     gap: 5px;
 }
+
 
