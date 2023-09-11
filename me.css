@@ -42,6 +42,9 @@ body{
     color: white;
 }
 
+#nameDiv{
+    display: block;
+}
 
 #nameDiv > :nth-child(2) > div{
     border-radius: 10px;
@@ -90,11 +93,6 @@ body{
 
 
 
-@keyframes anime{
-    from{
-        padding-bottom: 0px;
-    }
-    to{
-        padding-bottom: 50px;
-    }
+@media only screen and (max-width: 600px){
+	
 }
