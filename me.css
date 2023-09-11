@@ -3,226 +3,98 @@
 body{
     font-family: 'Courier New', Courier, monospace;
 }
-/* Image div */
-.image{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-top: 50px;
-}
-/*Homepage*/
-#homePage{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 50px;
-}
-#homeImage{
-    width: 200px;
-    margin-top: 50px;
-}
-#homeImage > img {
-    filter: grayscale(100%);
-}
-#homeText{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 600px;
-}
-/* Name div */
-.name{
-    /* display: flex;
-   justify-content: center;
-   align-items: center; */
-   margin-top: 25px;
-}
-.name2{
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
-/* Name spam */
-#name{
-    font-family: 'Bruno Ace SC', cursive;
-    font-weight: bold;
-    font-size: 40px;
-}
-#name2{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 25px;
-}
-
-/* Menu Div */
-.menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    background-color: rgb(247,247,248);
-}
-/* Menu Items */
-#menuItems{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    list-style: none;
-}
-#menuItems > li > button{
-    font-family: 'Inconsolata', monospace;
-    background-color:rgb(247,247,248) ;
-    font-weight: bold;
+#nav a{
+    text-decoration: none;
     color: black;
-    text-decoration: none;
-    font-size: 25px;
-    padding: 7px 30px 7px 30px;
-    transition: 1s;
-    border: 0px solid darkgray;
-    border-radius: 10px;
-}
-#menuItems > li > button:hover{
-    cursor: pointer;
-    color: white;
-    background-color: #4b6cc1;
-}
-
-/* Footer div */
-.footer{
     display: block;
-    width:fit-content;
-    margin:auto;
+    position: relative;
+    transition: 300ms;
 }
-#footerNotes{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#nav a::after{
+    content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: darkcyan;
+	opacity: 0;
+	transition: opacity 300ms, transform 300ms;
 }
-#footerNotes p{
-    font-family: 'Inconsolata', monospace;
+#nav a:hover::after,
+#nav a:hover::after{
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
 }
-
-/*Main content area*/
-#contentPrime{
-    margin-top: 18px;
+#nav a:hover{
+    color: darkcyan;
 }
-
-/*Specific content area*/
-.content{
-    display: flex;
-    margin: auto;
-    width: fit-content;
-    gap: 35px;
-
-}
-.stackContent{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-top: 60px;
-    margin-bottom: 100px;
-}
-.stackContent div{
-    display: flex;
-    gap: 60px;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/**Content title*/
-.title{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.titleName{
-    font-family: 'Inconsolata', monospace;
-    font-size: 40px;
-    margin: 0;
-
-}
-.more{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-/**Content text**/
-.details{
-    display: flex;
-    flex-direction: column;
-    padding-top: 150px;
-    margin: 0;
-}
-
-.longText{
-    inline-size: 300px;
-    overflow-wrap: break-word;
-    margin-bottom: 10px;
-}
-
-.titleName2{
-    font-family: 'Inconsolata', monospace;
-    font-weight: bold;
-    font-size: 30px;
-    
-}
-.more2{
-    font-size: 20px;
-}
-.MoreLink{
-    font-family: 'Inconsolata', monospace;
-    text-decoration: none;
-    color: white;
-    border: 0px solid darkgray;
-    background-color: #4b6cc1;
-    padding: 15px;
-    border-radius: 20px;
-    margin-top: 10px;
-    font-size: 17px;
-    transition: 0.5s;
-}
-.MoreLink:hover{
-    font-size: 20px;
+#nav button{
+    border-radius: 5px;
     background-color: white;
-    border: 2px solid #4b6cc1;
-    color: #4b6cc1;
+    border: 1px solid darkcyan;
+    color: darkcyan;
+    transition: 300ms;
 }
-
-/*Contact Page*/
-#contactDiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.contactDetails{
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-.contactDetails .img{
-    width: 50px;
-    height: 50px;
-
-}
-#twitter, #linkedin, #github{
-    display: flex;
-    align-items: center;
-    gap: 5px;
+#nav button:hover{
+    background-color: darkcyan;
+    color: white;
 }
 
 
+#nameDiv > :nth-child(2) > div{
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px darkgrey;
+    transition: 300ms ease-in-out;
+}
+#nameDiv > :nth-child(2) > *:hover{
+    transition: 300ms ease-in-out;
+    padding-bottom: 50px;
+}
+#nameDiv > :nth-child(3) > div{
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px darkgrey;
+    transition: 300ms ease-in-out;
+}
+#nameDiv > :nth-child(1){
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px darkcyan;
+}
+#nameDiv > :nth-child(2) > div:hover{
+    border: 0px solid darkcyan;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px darkgrey;
+}
+#nameDiv > :nth-child(3) > div:hover{
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px darkcyan;
+}
+
+
+#skillsDiv > :nth-child(1){
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px darkgrey;
+    transition: 300ms ease-in-out;
+}
+#skillsDiv > :nth-child(2){
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px darkcyan;
+}
+#skillsDiv > :nth-child(1):hover{
+    border: 0px solid darkcyan;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px darkgrey;
+}
+
+
+
+
+@keyframes anime{
+    from{
+        padding-bottom: 0px;
+    }
+    to{
+        padding-bottom: 50px;
+    }
+}

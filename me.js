@@ -1,41 +1,45 @@
-let work = document.getElementById("workButton")
-let projects = document.getElementById("projectsButton")
-// let articles = document.getElementById("articlesButton")
-let contact = document.getElementById("contactButton")
+let arrow = document.querySelectorAll(".arrow")
+let hoverDiv = document.querySelectorAll(".hover")
 
-let workDiv = document.getElementById("work")
-let projectsDiv = document.getElementById("projects")
-// let articlesDiv = document.getElementById("articles")
-let contactDiv = document.getElementById("contact")
+let stats = document.querySelectorAll("#nameDiv > :nth-child(2) > div")
 
-workDiv.style.display = "block"
-projectsDiv.style.display = "none"
-// articlesDiv.style.display = "none"
-contactDiv.style.display = "none"
-
-work.addEventListener("click", function(){
-    workDiv.style.display = "block"
-    projectsDiv.style.display = "none"
-    // articlesDiv.style.display = "none"
-    contactDiv.style.display = "none"
-})
-projects.addEventListener("click", function(){
-    workDiv.style.display = "none"
-    projectsDiv.style.display = "block"
-    // articlesDiv.style.display = "none"
-    contactDiv.style.display = "none"
-})
-// articles.addEventListener("click", function(){
-//     workDiv.style.display = "none"
-//     projectsDiv.style.display = "none"
-//     articlesDiv.style.display = "block"
-//     contactDiv.style.display = "none"
+// stats.forEach(function(stat){
+//     stat.addEventListener("mouseover", function(){
+//         stat.classList.remove("justify-content-center")
+//     })
+//     stat.addEventListener("mouseout", function(){
+//         stat.classList.add("justify-content-center")
+//     })
 // })
-contact.addEventListener("click", function(){
-    workDiv.style.display = "none"
-    projectsDiv.style.display = "none"
-    // articlesDiv.style.display = "none"
-    contactDiv.style.display = "block"
+
+arrow.forEach(function(arrowEl){
+    arrowEl.style.transition = "300ms"
 })
 
-
+hoverDiv.forEach(function(hoverEl){
+    if(hoverEl == hoverDiv[0]){
+        hoverEl.addEventListener("mouseover", function(){
+            arrow[0].style.color = "darkcyan"
+        })
+        hoverEl.addEventListener("mouseout", function(){
+            arrow[0].style.color = "black"
+        })
+    }
+    if(hoverEl == hoverDiv[1]){
+        hoverEl.addEventListener("mouseover", function(){
+            arrow[1].style.color = "darkcyan"
+        })
+        hoverEl.addEventListener("mouseout", function(){
+            arrow[1].style.color = "black"
+        })
+    }
+    if(hoverEl == hoverDiv[2]){
+        hoverEl.addEventListener("mouseover", function(){
+            arrow[2].style.color = "darkcyan"
+        })
+        hoverEl.addEventListener("mouseout", function(){
+            arrow[2].style.color = "black"
+        })
+    }
+    
+})
