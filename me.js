@@ -2,16 +2,9 @@ let arrow = document.querySelectorAll(".arrow")
 let hoverDiv = document.querySelectorAll(".hover")
 
 let stats = document.querySelectorAll("#nameDiv > :nth-child(2) > div")
+let nameDiv = document.getElementById("nameDiv")
 
-// stats.forEach(function(stat){
-//     stat.addEventListener("mouseover", function(){
-//         stat.classList.remove("justify-content-center")
-//     })
-//     stat.addEventListener("mouseout", function(){
-//         stat.classList.add("justify-content-center")
-//     })
-// })
-
+// Arrow hover
 arrow.forEach(function(arrowEl){
     arrowEl.style.transition = "300ms"
 })
@@ -43,3 +36,18 @@ hoverDiv.forEach(function(hoverEl){
     }
     
 })
+
+// Media queries
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+        nameDiv.classList.remove("d-flex")
+        document.body.style.backgroundColor = "yellow";
+    } else{
+        document.body.style.backgroundColor = "white"
+    }
+  }
+  
+  var x = window.matchMedia("(max-width: 480px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes
+  

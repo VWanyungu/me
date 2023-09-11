@@ -30,14 +30,16 @@ body{
 #nav a:hover{
     color: darkcyan;
 }
-#nav button{
+
+
+#reachBtn{
     border-radius: 5px;
     background-color: white;
     border: 1px solid darkcyan;
     color: darkcyan;
     transition: 300ms;
 }
-#nav button:hover{
+#reachBtn:hover{
     background-color: darkcyan;
     color: white;
 }
@@ -90,9 +92,3 @@ body{
     box-shadow: 5px 5px 15px darkgrey;
 }
 
-
-
-
-@media only screen and (max-width: 600px){
-	
-}
