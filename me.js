@@ -40,9 +40,10 @@ hoverDiv.forEach(function(hoverEl){
 // Media queries
 function myFunction(x) {
     if (x.matches) { // If media query matches
-        nameDiv.classList.remove("d-flex")
+        nameDiv.classList.add("flex-column")
         document.body.style.backgroundColor = "yellow";
     } else{
+        
         document.body.style.backgroundColor = "white"
     }
   }
