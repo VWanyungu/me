@@ -3,6 +3,7 @@ let hoverDiv = document.querySelectorAll(".hover")
 
 let stats = document.querySelectorAll("#nameDiv > :nth-child(2) > div")
 let nameDiv = document.getElementById("nameDiv")
+let nameDivChildren = document.querySelectorAll("#nameDiv > div")
 
 // Arrow hover
 arrow.forEach(function(arrowEl){
@@ -41,6 +42,10 @@ hoverDiv.forEach(function(hoverEl){
 function myFunction(x) {
     if (x.matches) { // If media query matches
         nameDiv.classList.add("flex-column")
+        nameDiv.style.marginLeft = ("12%")
+        nameDivChildren.forEach(function(child){
+            child.classList.add("mt-5")
+        })
         document.body.style.backgroundColor = "yellow";
     } else{
         
