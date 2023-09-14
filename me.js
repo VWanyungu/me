@@ -42,10 +42,15 @@ hoverDiv.forEach(function(hoverEl){
 function myFunction(x) {
     if (x.matches) { // If media query matches
         nameDiv.classList.add("flex-column")
-        nameDiv.style.marginLeft = ("12%")
+        nameDiv.style.marginLeft = ("5px")
         nameDivChildren.forEach(function(child){
             child.classList.add("mt-5")
         })
+        nameDivChildren[1].style.backgroundColor = "blue"
+        nameDivChildren[1].classList.add("p-4")
+        
+
+
         document.body.style.backgroundColor = "yellow";
     } else{
         
