@@ -59,9 +59,9 @@
       </div>
     </nav>
 
-    <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center" style="">
-            <form id="messageForm" action="" method="post" class="mt-4 p-4 was-validated" style="box-shadow: 0px 0px 2px darkgrey; border-radius: 10px; ">
+    <div class="container mb-5">
+        <div class="d-flex flex-wrap align-items-center justify-content-center">
+            <form id="messageForm" action="" method="post" class="mt-4 mb-5 p-4 was-validated" style="box-shadow: 0px 0px 2px darkgrey; border-radius: 10px; width: 100%;">
                 <h4 class="h4 text-center">Get in touch</h4>
                 <div class="row mb-4">
                   <div class="col-12">
@@ -83,30 +83,19 @@
                     <label class="form-label" for="message">Message</label>
                     <textarea class="form-control" id="message" rows="4" required></textarea>
                 </div>
-              
+
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-success btn-block mb-4 text-center col-12">Send Message</button>
+                <button type="submit" class="btn btn-primary btn-block mb-4 text-center col-12">Send Message</button>
 
-                <button id="newsBtn" class="btn btn-secondary text-light btn-block mb-4 text-center col-12">Subscribe to my newsletter</button>
-
-                <!-- Checkbox -->
-                <!-- <div class="form-check d-flex justify-content-center mb-4">
-                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                    <label class="form-check-label" for="form2Example33">
-                      Subscribe to my newsletter
-                    </label>
-                </div> -->
-              
                 <!-- Socials buttons -->
                 <div class="text-center">
-                  <p>Social Media:</p>
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
+                  <button type="button" class="btn btn-light btn-floating mx-1">
                     <i class="fab fa-twitter"></i>
                   </button>
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
+                  <button type="button" class="btn btn-light btn-floating mx-1">
                     <i class="fab fa-github"></i>
                   </button>
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
+                  <button type="button" class="btn btn-light btn-floating mx-1">
                     <i class="fab fa-linkedin"></i>
                   </button>
                 </div>
@@ -114,6 +103,37 @@
         </div>
         
     </div>
+
+    <footer class="bg-light text-center fixed-bottom">
+      <div class="container">
+        <div class="d-flex flex-column flex-wrap justify-content-center align-items-center">
+          <ul class="list-unstyled d-flex flex-wrap justify-content-center mt-2 mb-2 align-items-center">
+            <li class="me-3">
+                <a href="index.html" class="text-dark">Home</a>
+            </li>
+            <li class="me-3">
+                <a href="contact.html" class="text-dark">Contact</a>
+            </li>
+            <li class="me-3">
+                <a href="experience.html" class="text-dark">Experience</a>
+            </li>
+            <li class="me-3">
+                <a href="projects.html" class="text-dark">Projects</a>
+            </li>
+            <li class="me-3">
+              <a href="blogs.html" class="text-dark">Blogs</a>
+            </li>
+            <li class="me-3">
+                Icons by
+                <a class="text-dark h6" href="https://icons8.com/">Icons8</a>
+            </li>
+
+
+          </ul>
+          
+        </div>
+      </div>
+    </footer>
 
     <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
     <!-- Ionicons -->
