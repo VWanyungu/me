@@ -38,27 +38,4 @@ hoverDiv.forEach(function(hoverEl){
     
 })
 
-// Media queries
-// function myFunction(x) {
-//     if (x.matches) { // If media query matches
-//         nameDiv.classList.add("flex-column")
-//         nameDiv.style.marginLeft = ("5px")
-//         nameDivChildren.forEach(function(child){
-//             child.classList.add("mt-5")
-//         })
-//         nameDivChildren[1].style.backgroundColor = "blue"
-//         nameDivChildren[1].classList.add("p-4")
-        
-
-
-//         document.body.style.backgroundColor = "yellow";
-//     } else{
-        
-//         document.body.style.backgroundColor = "white"
-//     }
-//   }
-  
-//   var x = window.matchMedia("(max-width: 480px)")
-//   myFunction(x) // Call listener function at run time
-//   x.addListener(myFunction) // Attach listener function on state changes
   

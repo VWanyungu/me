@@ -4,6 +4,15 @@ body{
     font-family: 'Courier New', Courier, monospace;
 }
 
+.navbar-toggler, .navbar-toggler-icon{
+    border: none !important;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
 #nav a{
     text-decoration: none;
     color: black;
@@ -11,7 +20,8 @@ body{
     position: relative;
     transition: 300ms;
 }
-#nav a::after{
+#nav ul li:nth-last-child(n+2) a::after{
+    opacity: 0;
     content: '';
 	position: absolute;
 	bottom: 0;
@@ -19,15 +29,15 @@ body{
 	width: 100%;
 	height: 0.1em;
 	background-color: darkcyan;
-	opacity: 0;
 	transition: opacity 300ms, transform 300ms;
 }
-#nav a:hover::after,
-#nav a:focus::after{
+#nav ul li:nth-last-child(n+2) a:hover::after,
+#nav ul li:nth-last-child(n+2) a:focus::after
+{
     opacity: 1;
     transform: translate3d(0, 0.2em, 0);
 }
-#nav a:hover{
+#nav ul a:hover{
     color: darkcyan;
 }
 
@@ -44,33 +54,36 @@ body{
     color: white;
 }
 
-#nameDiv{
+/* #nameDiv{
     display: block;
-}
-
-#nameDiv > :nth-child(2) > div{
-    border-radius: 10px;
-    box-shadow: 0px 0px 2px darkgrey;
-    transition: 300ms ease-in-out;
-}
-#nameDiv > :nth-child(2) > *:hover{
-    transition: 300ms ease-in-out;
-    /* padding-bottom: 50px; */
-}
-#nameDiv > :nth-child(3) > div{
-    border-radius: 10px;
-    box-shadow: 0px 0px 2px darkgrey;
-    transition: 300ms ease-in-out;
-}
-#nameDiv > :nth-child(1){
+} */
+#nameDiv #details{
     border-radius: 10px;
     box-shadow: 0px 0px 2px darkgray;
 }
-#nameDiv > :nth-child(2) > div:hover{
+
+#nameDiv  #experience > div{
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px darkgrey;
+    transition: 300ms ease-in-out;
+}
+#nameDiv  #experience > div:hover{
+    transition: 300ms ease-in-out;
+    /* padding-bottom: 50px; */
+}
+
+#nameDiv  #experience > div:hover{
     border-radius: 10px;
     box-shadow: 5px 5px 15px darkgrey;
 }
-#nameDiv > :nth-child(3) > div:hover{
+
+#nameDiv #more > div{
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px darkgrey;
+    transition: 300ms ease-in-out;
+}
+
+#nameDiv #more > div:hover{
     cursor: pointer;
     border-radius: 10px;
     box-shadow: 0px 0px 2px darkcyan;
