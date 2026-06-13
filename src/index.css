@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #fdfdff;
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  .beam-bg {
+    @apply relative overflow-hidden;
+    /* No bg here — background comes from ::before only */
+  }
+
+  .beam-bg::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    mix-blend-mode: screen;
+    background:
+      /* dark base color as the first layer */
+      linear-gradient(#052010, #052010),
+      /* then your beams on top */
+      conic-gradient(from 193deg at 12% 125%,
+        transparent 0deg, transparent 5.5deg,
+        rgba(100, 255, 150, 0.5) 5.5deg, rgba(100, 255, 150, 0.5) 9deg,
+        transparent 9deg, transparent 360deg),
+      conic-gradient(from 193deg at 31% 130%,
+        transparent 0deg, transparent 5deg,
+        rgba(100, 255, 150, 0.5) 5deg, rgba(100, 255, 150, 0.5) 8.5deg,
+        transparent 8.5deg, transparent 360deg),
+      conic-gradient(from 190deg at 50% 132%,
+        transparent 0deg, transparent 5deg,
+        rgba(100, 255, 150, 0.5) 5deg, rgba(100, 255, 150, 0.5) 9.5deg,
+        transparent 9.5deg, transparent 360deg),
+      conic-gradient(from 190deg at 69% 130%,
+        transparent 0deg, transparent 5deg,
+        rgba(100, 255, 150, 0.5) 5deg, rgba(100, 255, 150, 0.5) 8.5deg,
+        transparent 8.5deg, transparent 360deg),
+      conic-gradient(from 188deg at 88% 125%,
+        transparent 0deg, transparent 5.5deg,
+        rgba(100, 255, 150, 0.5) 5.5deg, rgba(100, 255, 150, 0.5) 9deg,
+        transparent 9deg, transparent 360deg);
+  }
+
+  .beam-bg::after {
+    content: '';
+    @apply absolute pointer-events-none;
+    left: 50%;
+    bottom: -60px;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse,
+        rgba(100, 255, 150, 0.12) 0%, transparent 70%);
+  }
+
+  /* Animated underline for non-last nav links */
+  .nav-underline {
+    @apply relative block text-gray-900 transition-colors duration-300;
+  }
+
+  .nav-underline::after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #388E3C;
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  .nav-underline:hover::after,
+  .nav-underline:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+  }
+
+  .nav-underline:hover {
+    color: #388E3C;
+  }
+
+  /* Stat / info card */
+  .stat-card {
+    @apply text-center px-6 py-2 mb-2 bg-gray-50 rounded-xl shadow-[0_0_2px_darkgray] transition-shadow duration-300 ease-in-out;
+  }
+
+  .stat-card:hover {
+    @apply shadow-[0_0_4px_darkgray];
+  }
+
+  /* Quick-link card */
+  .link-card {
+    @apply flex-1 p-3 rounded-xl shadow-[0_0_2px_darkgray] transition-shadow duration-300 ease-in-out cursor-pointer;
+  }
+
+  .link-card:hover {
+    box-shadow: 0 0 2px #008B8B;
+  }
+
+  /* Blog card */
+  .blog-card {
+    @apply rounded bg-gray-50 flex flex-wrap items-start justify-center text-center h-full border border-white transition-colors duration-300;
+  }
+
+  .blog-card:hover {
+    @apply border-gray-400;
+  }
+
+  /* Content card (experience / projects) */
+  .content-card {
+    @apply flex flex-col items-center justify-center bg-gray-100 p-6 h-full text-center rounded-xl;
+  }
+}
