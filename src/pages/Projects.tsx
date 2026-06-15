@@ -119,7 +119,7 @@ export default function Projects() {
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-green-700 hover:gap-3 transition-all duration-200"
                   >
-                    See Details ↗
+                    View ↗
                   </a>
                 </div>
               ))}

@@ -108,7 +108,7 @@ export default function Blog() {
               <a
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group py-8 grid grid-cols-1 md:grid-cols-12 gap-4 hover:bg-surface/50 -mx-4 px-4 rounded-xl transition-colors duration-200"
+                className="group py-8 grid grid-cols-1 md:grid-cols-12 gap-4 hover:bg-surface/50 -mx-4 px-4  transition-colors duration-200"
               >
                 {/* <div className="md:col-span-2">
                   <p className=" text-xs text-muted">
@@ -154,12 +154,12 @@ export default function Blog() {
               </p>
             </div>
             <a
-              href="https://github.com"
+              href="https://discovertech.hashnode.dev/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0 inline-flex items-center gap-2 border border-white/20 text-white  text-xs uppercase tracking-widest px-6 py-3 rounded-full hover:border-green-light hover:text-green-light transition-colors duration-200 whitespace-nowrap"
             >
-              Follow on GitHub ↗
+              Follow on Hashnode ↗
             </a>
           </div>
         </div>

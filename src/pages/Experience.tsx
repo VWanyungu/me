@@ -20,7 +20,7 @@ export default function Experience() {
               Experience
             </span>
           </h1>
-          <p className="text-gray-500 max-w-lg leading-relaxed">
+          <p className="hidden md:block text-gray-500 max-w-lg leading-relaxed">
             {meta.bio}
           </p>
         </div>
@@ -53,9 +53,11 @@ export default function Experience() {
                   <p className="font-mono-dm text-sm text-muted mb-4">
                     {exp.company} · {exp.location}
                   </p>
-                  <p className="text-gray-500 leading-relaxed text-sm max-w-xl">
-                    {exp.description}
-                  </p>
+                  {exp.description.split("&").map((line, i) => (
+                    <p key={i} className="text-gray-500 leading-relaxed text-sm max-w-xl mt-4">
+                      {line}
+                    </p>
+                  ))}
                 </div>
 
                 {/* Tags */}
