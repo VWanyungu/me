@@ -60,7 +60,8 @@ export default function Blog() {
         <div className="max-w-6xl mx-auto">
           {/* Featured post */}
           <a
-            href={`/blog/${featured.slug}`}
+            href={`${featured.link}`}
+            target="_blank"
             className="group block mb-16"
           >
             <div className="grid grid-cols-1 gap-8 border border-ink/10 bg-surface rounded-2xl p-4 md:p-10 hover:border-green-700/30 transition-all duration-300 hover:-translate-y-0.5">
@@ -107,7 +108,8 @@ export default function Blog() {
             {filtered.map((post) => (
               <a
                 key={post.slug}
-                href={`/blog/${post.slug}`}
+                href={`${post.link}`}
+                target="_blank"
                 className="group py-8 grid grid-cols-1 md:grid-cols-12 gap-4 hover:bg-surface/50 -mx-4 px-4  transition-colors duration-200"
               >
                 {/* <div className="md:col-span-2">

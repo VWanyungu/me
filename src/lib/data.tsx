@@ -70,7 +70,8 @@ export const projects = [
         description:
             'A Progressive Web App that provides access to university lecture notes, exams, cats, assignments, quizes and tutorials for university students. It is a full stack application with a postgre database on Supabase and uses the ChatPDF api to generate quiz questions and answers.',
         stack: ['Tailwind', 'Node', 'Express', 'Supabase', 'ChatPDF API', 'Daraja API'],
-        link: 'https://revision-access-point.vercel.app/',
+        // link: 'https://revision-access-point.vercel.app/',
+        link: 'https://rap.co.ke',
     },
     {
         slug: 'calibre-steps',
@@ -92,7 +93,7 @@ export const projects = [
         year: '2025',
         tags: ['Full Stack', 'Django', 'Spotify API'],
         tagline: 'For smooth Spotify song on song transitions',
-        description: 'A web application that allows users to create playlists of songs that flow well together. It uses the Spotify API to get song data and the ffmpeg library to create smooth transitions between songs.',
+        description: 'A web application that allows users to create playlists of songs with smooth song-on-song tramsitions. It uses the Spotify API to get song data and the ffmpeg library to extract song characteristics. Use of a graph and MST algirthim creates smooth transitions between songs.',
         stack: ['Django', 'react', 'ffmpeg', 'Docker', 'Spotify API', 'DSA'],
         link: 'https://step-builder--vwanyungu254.replit.app/',
     },
@@ -104,16 +105,25 @@ export const blogPosts = [
         title: "Performance Optimizations for Your Backend",
         excerpt: "Learn how to improve backend performance with practical techniques such as database indexing, connection pooling, caching, and background job queues to build faster and more scalable applications",
         date: "2026-05-21",
-        tags: ["backend"],
+        tags: ["backend", "performance"],
         readTime: "13 min read",
         link: "https://discovertech.hashnode.dev/performance-optimizations-for-your-back-end"
+    },
+    {
+        slug: "setup-vps-reverse-proxy-docker",
+        title: "How to set up a new VPS with a reverse proxy (Caddy) and Docker",
+        excerpt: "See the steps I took to set up my brand new VPS",
+        date: "2026-06-1",
+        tags: ["backend", "VPS", "hosting", "reverse proxy"],
+        readTime: "4 min read",
+        link: "https://discovertech.hashnode.dev/how-to-set-up-a-new-vps-with-a-reverse-proxy-caddy-and-docker"
     },
     {
         slug: "rate-limiting",
         title: "Rate Limiting",
         excerpt: "Learn how to design and implement effective rate limiting strategies to protect your APIs from abuse, ensure fair resource usage, and maintain system reliability. Explore common algorithms, implementation layers and industry best practices.",
         date: "2026-05-11",
-        tags: ["backend"],
+        tags: ["backend", "rate limiting"],
         readTime: "5 min read",
         link: "https://discovertech.hashnode.dev/rate-limiting"
     },
